@@ -30,8 +30,11 @@ public class LdapSecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
-        authenticationManagerBuilder.inMemoryAuthentication()
-            .withUser("prabhu").password("prabhu").authorities("-");
+        authenticationManagerBuilder
+                .inMemoryAuthentication()
+                .withUser("prabhu")
+                .password("{noop}prabhu")
+                .authorities("-");
     }
 
     // For Ldap authentication configuration
@@ -42,7 +45,7 @@ public class LdapSecurity extends WebSecurityConfigurerAdapter {
     // .contextSource(contextSource());
     // }
 
-    // for Ldap authentication
+    // For Ldap authentication
     // @Bean
     // public DefaultSpringSecurityContextSource contextSource() {
     // return new DefaultSpringSecurityContextSource(Arrays.asList("ldap://localhost:8080"), "OU=Employees,O=company,C=Global");

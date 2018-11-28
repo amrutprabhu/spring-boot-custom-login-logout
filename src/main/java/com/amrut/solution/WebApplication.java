@@ -2,10 +2,8 @@ package com.amrut.solution;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-@ComponentScan("com.amrut.solution")
 @SpringBootApplication()
 public class WebApplication extends SpringBootServletInitializer {
 
